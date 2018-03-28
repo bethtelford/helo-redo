@@ -159,8 +159,8 @@ Your users can now register and login, but your front end immediately forgets wh
 * Now if you console.log props inside your render method you should see the values coming from the Redux state. 
 * Set up the user profile picture and username to display. This will be pretty boring looking until we update these values in the next step
 
-Step 4 
-Then you will setup your Auth component to update Redux state.
+## Step 4 
+Finally you will setup your Auth component to update Redux state.
 
 * In reducer.js write an action builder that takes in a parameter for the user id, username, and profile picture. 
 * The function should return an action object with two properties: a type and a payload.
@@ -178,3 +178,42 @@ Then you will setup your Auth component to update Redux state.
 * Now update both the register and login methods.
   * Once the user information has come back from the server, invoke the action builder and pass the information in. 
   * The profile picture and username should now display in the navbar.
+
+
+## Competencies
+You just covered a lot of competencies! Here is the breakdown:
+
+<strong>Step 1</strong> </br>
+"Student can add ReactRouter to their code base (HashRouter)" </br>
+"Student can add ReactRouter to their code base (Switch, Route, component)" </br>
+"Student can add ReactRouter to their code base (Link)" </br>
+
+<strong>Step 2</strong> </br>
+"Student can apply ES6 constructs in React for better code (arrow functions)" </br>
+"Student can use class based components in react and it's features (state, setState, constructors)" </br>
+"Student can use class based components in react and it's features (events)" </br>
+"Student can interact with the web via axios and REST" </br>
+"Student can create a RESTful API (Status codes)" </br>
+"Student can create a RESTful API (body parser)" </br>
+"Student can create a RESTful API (POST endpoint)" </br>
+"Student can create SQL statements to manipulate data in their databases (Select)" </br>
+"Student can create SQL statements to manipulate data in their databases (Insert)" </br>
+"Student can run SQL commands in their NodeJS servers using Massive" </br>
+
+<strong>Step 3</strong> </br>
+"Student can create functional components that receive and render props" </br>
+"Student can utilize Redux in their code to manage state (store, reducer)" </br>
+"Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)" </br>
+
+
+<strong>Step 4</strong> </br>
+"Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)" </br>
+
+
+<!-- "Student can use class based components in react and it's features (props)" </br>
+"Student can use componentDidMount in their code" </br>
+"Student can create a RESTful API (GET endpoint)" </br>
+
+
+"Student can use class based components in react and it's features (.bind)" </br>
+"Student can create a RESTful API (params)" </br> -->
