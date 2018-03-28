@@ -18,5 +18,9 @@ massive(process.env.CONNECTION_STRING)
 
     app.get('/api/posts/:userid', ctrl.readPosts);
 
+    app.post('/api/post/:userid', ctrl.createPost);
+    
+    app.get('/api/post/:id', ctrl.readPost);
+
     app.listen(4000, _ => console.log('Housten we have lift off on port 4000'))
   })

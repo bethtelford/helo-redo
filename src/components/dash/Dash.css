@@ -1,6 +1,5 @@
 .Dash {
   width: 70%;
-  /* background-color: white; */
   margin: 0 auto;
 }
 .dash_filter {
@@ -38,16 +37,5 @@
 .dash_post_box > h3 {
   font-size: 30px;
 }
-.dash_post_author_box {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 30%;
-}
-.dash_post_author_box > img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  margin: 0 5px;
-}
+
+

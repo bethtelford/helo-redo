@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import searchLogo from './../../assets/search_logo.png';
 import './Dash.css';
@@ -30,28 +31,27 @@ class Dash extends Component {
     }
     axios.get(url)
       .then(res => {
-        this.setState({
-          posts: res.data
-        })
+        setTimeout(_ => this.setState({ posts: res.data }), 500)
       })
   }
   render() {
     let posts = this.state.posts.map((el) => {
-      console.log(el)
-      return <div key={el.id} className='content_box dash_post_box'>
-        <h3>{el.title}</h3>
-        <div className='dash_post_author_box'>
-          <p>by {el.author_username}</p>
-          <img src={el.profile_pic} alt='author picture' />
+      return <Link to={`/post/${el.post_id}`} key={el.post_id}>
+        <div className='content_box dash_post_box'>
+          <h3>{el.title}</h3>
+          <div className='author_box'>
+            <p>by {el.author_username}</p>
+            <img src={el.profile_pic} alt='author' />
+          </div>
         </div>
-      </div>
+      </Link>
     })
     return (
       <div className='Dash'>
         <div className='content_box dash_filter'>
           <div className='dash_search_box'>
-            <input value={this.state.search} onChange={e => this.setState({ search: e.target.value })}className='dash_search_bar' placeholder='Search by Title' />
-            <img onClick={this.grabPosts}className='dash_search_button' src={searchLogo} alt='search' />
+            <input value={this.state.search} onChange={e => this.setState({ search: e.target.value })} className='dash_search_bar' placeholder='Search by Title' />
+            <img onClick={this.grabPosts} className='dash_search_button' src={searchLogo} alt='search' />
           </div>
           <div className='dash_check_box'>
             <p>My Posts</p>
@@ -59,7 +59,15 @@ class Dash extends Component {
           </div>
         </div>
         <div className='content_box dash_posts_container'>
-          {posts}
+          {this.state.posts.length
+            ?
+            posts
+            :
+            <div className='load_box'>
+              <div className='load_background'></div>
+              <div className='load'></div>
+            </div>
+          }
         </div>
       </div>
     );
