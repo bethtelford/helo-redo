@@ -1,11 +1,11 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import {logout} from './../../ducks/reducer';
+import { logout } from './../../ducks/reducer';
 
 import homeLogo from './../../assets/home_logo.png';
-import newLogo from './../../assets/new_logo.png'; 
+import newLogo from './../../assets/new_logo.png';
 import logoutLogo from './../../assets/shut_down.png';
 import './SideNav.css';
 
@@ -32,4 +32,4 @@ function SideNav(props) {
 function mapStateToProps(state) {
   return state
 }
-export default withRouter(connect(mapStateToProps, {logout})(SideNav));
+export default withRouter(connect(mapStateToProps, { logout })(SideNav));

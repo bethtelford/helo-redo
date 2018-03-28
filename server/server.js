@@ -18,11 +18,8 @@ massive(process.env.CONNECTION_STRING)
           if (user[0]) {
             res.status(200).send(user[0])
           } else {
-            axios.get('https://randomuser.me/api/')
-              .then(resp => {
-                db.create_user(username, password, resp.data.results[0].picture.large)
-                  .then(user => res.status(200).send(user[0]))
-              })
+            db.create_user(username, password, `https://robohash.org/${username}.png`)
+              .then(user => res.status(200).send(user[0]))
           }
         })
     })
