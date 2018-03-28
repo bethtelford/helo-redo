@@ -12,7 +12,7 @@ export default function (state = initialState, action) {
   let { type, payload } = action;
   switch (type) {
     case UPDATE_USER:
-      return { ...state, username: payload.username, profilePic: payload.profile_pic, userId: payload.user_id };
+      return { ...state, username: payload.username, profilePic: payload.profile_pic, userId: payload.id };
     case LOGOUT:
       return initialState
     default:

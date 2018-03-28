@@ -4,3 +4,11 @@ create table sim3_users (
     password varchar(20),
     profile_pic text
 )
+
+create table sim3_posts (
+    id serial primary key,
+    title varchar(45),
+    content text,
+    img text,
+    author_id integer
+)

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
 .App {
-  padding-left: 100px;
+  padding: 20px 20px 20px 100px;
   font-family: 'Open Sans', 'Courier New', Courier, monospace;
   background-color: #f2f2f2;
   min-width: 100%;
@@ -12,9 +11,14 @@
   border-radius: 1px;
   background-image: radial-gradient(circle at 50% -46%, #737373, #403d39);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  /* height: 45px;
-  width: 65px; */
   padding: 10px 20px;
   color: white;
   border: none;
+}
+
+.content_box {
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
