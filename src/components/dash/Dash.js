@@ -12,7 +12,8 @@ class Dash extends Component {
     this.state = {
       search: '',
       myPosts: true,
-      posts: []
+      posts: [],
+      loading: true
     }
     this.grabPosts = this.grabPosts.bind(this);
   }
@@ -31,7 +32,7 @@ class Dash extends Component {
     }
     axios.get(url)
       .then(res => {
-        setTimeout(_ => this.setState({ posts: res.data }), 500)
+        setTimeout(_ => this.setState({ posts: res.data, loading: false }), 500)
       })
   }
   render() {
@@ -59,7 +60,7 @@ class Dash extends Component {
           </div>
         </div>
         <div className='content_box dash_posts_container'>
-          {this.state.posts.length
+          {!this.state.loading
             ?
             posts
             :
