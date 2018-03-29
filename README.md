@@ -30,7 +30,7 @@ This section will help you create the files you need and install the packages yo
 9) Create a route.js file inside the src folder. We will use this for our routing later.
 10) Create a folder called ducks inside of src.
 11) Create a store.js file and a reducer.js file inside of that folder.
-10) Run `npm start` to make sure everything is working. You should see the names of all the components displayed.
+12) Run `npm start` to make sure everything is working. You should see the names of all the components displayed.
 
 ## Server
 1) Run `npm i express body-parser --save`
@@ -70,7 +70,7 @@ Congratulations! If you finished all the setup, you've already completed some de
 
 <b>Live example [here](https://cl.ly/3p0v0k2L2m43). Filled out planning sheet [here](https://github.com/DevMountain/simulation-2/blob/master/PLANNING_SHEET.md)</b>
 
-In the first part you will set up routing and the ability to login or register.
+In the first part you will set up routing and the ability to login/register.
 
 Functionality of the Authentication View:
 * A user should be able to enter a username and password into the input boxes.
@@ -104,7 +104,6 @@ You are going to begin by setting up the routing.
    * The '/dashboard' path should render the Dashboard component.
    * The '/post/:postid' path should render the Post component.
    * The '/new' path should render the Form component.
-   * The '/edit/:postid' path should render the Form component.
 * Open App.js and change what you're bringing into the component.
    * Remove Auth, Dashboard, Form, and Post from the component.
    * Instead bring in routes from routes.js and render it instead of the other components.
@@ -208,11 +207,116 @@ You just covered a lot of competencies! Here is the breakdown:
 <strong>Step 4</strong> </br>
 "Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)" </br>
 
+# Part 2
 
-<!-- "Student can use class based components in react and it's features (props)" </br>
-"Student can use componentDidMount in their code" </br>
+<b>Live example [here](https://cl.ly/3F0S2m1c261U)</b>
+
+In this part you will add the ability to view posts and create new ones.
+
+Functionality of the Dashboard View:
+* A user should be able to see all the posts created on Helo.
+  * They should be able to choose if their own posts are included in the feed.
+* A user should be able to search through the posts by title.
+  * They should be able to click the 'Reset' button to clear the search term.
+* A user should be able to click any of the posts to be taken to new page showing the post details.
+
+Functionality of the New Post View:
+* A user should be able to enter title, image URL, and content values into the form.
+* A user should be able to click the 'Post' button to create the post.
+  * If the user has not logged in, an alert should pop up instructing them to log in and the post should not be created.
+  * The user should be redirected to the Dashboard once the post has been created.
+
+## Design
+PICTURES HERE
+
+## Step 1
+First create the layout of the Dashboard.
+
+* Set up an input box for the search functionality. Make sure to store the value in state.
+* Create the 'Search' and 'Reset' buttons.
+* Set up a checkbox to include the user's posts labeled 'My Posts'. 
+  * Make sure to store the value in state.
+  * The value should be true intially.
+* Store the list of posts in state and map over the list.
+  * Each post should display the post title, and the author's username and profile picture.
+
+## Step 2
+Then write the GET endpoint to retreive all posts. This endpoint is going to accept some queries: userposts(boolean) and search(string).
+
+* The endpoint should have a parameter for the user id.
+* If userposts is true AND there is a search string, the endpoint should respond with all the posts where...
+  * The title contains the search string.
+* If userposts is false AND there is no search string, the endpoint should respond with all the posts where...
+  * The current user is NOT the author.
+* If userposts is false AND there is a search string, the endpoint should respond with all the posts where...
+  * The current user is NOT the author.
+  * The title contains the search string.
+* If userposts is true AND there is no search string, the endpoint should respond with all the posts.
+
+## Step 3
+Now set up Dashboard to hit the endpoint you just wrote.
+
+* First you will need to connect to Redux and pull the user id off of Redux state.
+  * Bring in the connect method from `react-redux`.
+  * Write the mapStateToProps function at the bottom of the file. Pull the user id off of Redux State.
+  * Invoke the connect method, passing in the mapStateToProps function and then invoking it with the component name as an argument.
+* Write a method that sends an axios request to the endpoint you just wrote.
+  * No matter the combination of queries, the request should send the user id from Redux state as a parameter.
+  * If the user has entered a search term into the input box, send that string as a query.
+  * If the 'My Posts' checkbox has been selected, send a userposts query with the value of true. 
+  * Once the request comes back, update state with the list of posts.
+* Use a lifecycle hook to fire this method when the dashboard first loads.
+* Write a method to reset the search. This method will hit the same endpoint.
+  * Send the user id as a parameter.
+  * If the 'My Posts' checkbox has been selected, send a userposts query with the value of true.
+  * Once the request comes back, update state with the list of posts and set the value of the search input to an empty string.
+
+## Step 4
+Then you will add the navigation functionality so the user can view any of the posts shown in the Dashboard View.
+
+* First write a GET endpoint in your server to retrieve a single post.
+  * The endpoint should use a parameter to determine which post should be pulled from the database.
+  * The endpoint should respond with the post title, image, and content for that post, as well as the username and profile picture of the post author (hint: use a join).
+* Set up the Post component state to store the post title, image, content, and the username and profile picture of the post author.
+* Write the JSX to display the values on state.
+* Update where you are mapping over the list of posts in Dashboard to include a Link.
+  * The Link should route the user to the Post view. 
+  * The Link should include the id of the post in the path as a parameter.
+* Write a method in Post to hit the endpoint you just wrote.
+  * The axios request should include the id of the desired post as a parameter. 
+  * The post id can be taken from the browser URL using the match object found on props.
+  * Once the response comes back, update state with the post values.
+
+## Step 5
+Now you will add the ability to add a new post.
+
+* Set up input boxes for title, image URL, and content in New Post.
+  * Each input box should update state.
+  * The image URL input box should populate an image preview.
+* Create the 'Post' button.
+* Next you will need to connect to Redux and pull the user id off of Redux state.
+  * Bring in the connect method from `react-redux`.
+  * Write the mapStateToProps function at the bottom of the file. Pull the user id off of Redux State.
+  * Invoke the connect method, passing in the mapStateToProps function and then invoking it with the component name as an argument.
+* Write a POST endpoint in your server.
+  * The endpoint should accept a parameter for the user id.
+  * The endpoint should pull the post title, image URL, and content off of the request body.
+  * The endpoint should respond with the 'all good' status code once it has added the post to the database.
+* Write a method in New Post that sends a request to the endpoint you just wrote.
+  * The axios request should include the user id as a parameter.
+  * The request should send all the values stored in state in the body.
+  * Once the response comes back from the server, redirect the user to the Dashboard.
+
+## Competencies
+You just covered a lot of competencies! Here is the breakdown:
+
+<strong>Step 2</strong> </br>
+"Student can create a RESTful API (params)" </br>
+"Student can create a RESTful API (queries)" </br>
 "Student can create a RESTful API (GET endpoint)" </br>
 
+<strong>Step 3</strong> </br>
+"Student can use componentDidMount in their code" </br>
 
-"Student can use class based components in react and it's features (.bind)" </br>
-"Student can create a RESTful API (params)" </br> -->
+<strong>Step 4</strong> </br>
+"Student can add ReactRouter to their code base (match object)" </br>
