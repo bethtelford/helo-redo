@@ -14,7 +14,7 @@ This section will help you create the files you need and install the packages yo
 
 ## Color Palette & Font
 
-<img src="https://github.com/DevMountain/simulation-2/blob/master/assets/style_guide.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/style_guide.png" />
 
 <b>[Google Font - Open Sans](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)</b>
 
