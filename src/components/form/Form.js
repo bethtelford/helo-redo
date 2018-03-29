@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import axios from 'axios';
 
 import noImage from './../../assets/no_image.jpg';
@@ -17,10 +16,10 @@ class Form extends Component {
   }
   submit() {
     if (this.props.userId) {
-      axios.post(`/api/post/${this.props.userId}`, this.state)
+      axios.post('/api/post', this.state)
         .then(res => this.props.history.push('/dashboard'))
     } else {
-      alert('You must log in to create posts')
+      alert('You must log in to create posts');
     }
   }
   render() {
@@ -46,9 +45,5 @@ class Form extends Component {
     );
   }
 }
-function mapStateToProps(state) {
-  return {
-    userId: state.userId
-  }
-}
-export default connect(mapStateToProps)(Form);
+
+export default Form;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import searchLogo from './../../assets/search_logo.png';
@@ -23,13 +22,13 @@ class Dash extends Component {
   }
   grabPosts() {
     let { search, myPosts } = this.state;
-    let url = `/api/posts/${this.props.userId}`;
+    let url = '/api/posts';
     if (myPosts && !search) {
-      url += '?mine=true'
+      url += '?mine=true';
     } else if (!myPosts && search) {
-      url += `?search=${search}`
+      url += `?search=${search}`;
     } else if (myPosts && search) {
-      url += `?mine=true&search=${search}`
+      url += `?mine=true&search=${search}`;
     }
     axios.get(url)
       .then(res => {
@@ -38,9 +37,9 @@ class Dash extends Component {
   }
   reset() {
     let { myPosts } = this.state;
-    let url = `/api/posts/${this.props.userId}`;
+    let url = '/api/posts';
     if (myPosts) {
-      url += '?mine=true'
+      url += '?mine=true';
     }
     axios.get(url)
       .then(res => {
@@ -87,9 +86,5 @@ class Dash extends Component {
     );
   }
 }
-function mapStateToProps(state) {
-  return {
-    userId: state.userId
-  }
-}
-export default connect(mapStateToProps)(Dash);
+
+export default Dash;
