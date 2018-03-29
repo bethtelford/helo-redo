@@ -92,9 +92,9 @@ Functionality of the Dashboard View:
 
 ## Design
 Authentication View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_auth.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_auth.png" />
 Dashboard View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_pt1_dashboard.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_pt1_dashboard.png" />
 
 ## Step 1
 You are going to begin by setting up the routing.
@@ -231,13 +231,13 @@ Functionality of the New Post View:
 
 ## Design
 Authentication View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_auth.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_auth.png" />
 Dashboard View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_pt2_dashboard.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_pt2_dashboard.png" />
 Post View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_post.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_post.png" />
 New Post View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/helo_redo_new_post.png" />
+<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_new_post.png" />
 
 
 ## Step 1
