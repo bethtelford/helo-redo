@@ -205,7 +205,6 @@ You just covered a lot of competencies! Here is the breakdown:
 "Student can utilize Redux in their code to manage state (store, reducer)" </br>
 "Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)" </br>
 
-
 <strong>Step 4</strong> </br>
 "Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)" </br>
 
