@@ -12,6 +12,5 @@ export default (
     <Route path='/dashboard' component={Dash} />
     <Route path='/post/:id' component={Post} />
     <Route path='/new' component={Form} />
-    <Route path='/edit/:id' component={Form} />
   </Switch>
 )
