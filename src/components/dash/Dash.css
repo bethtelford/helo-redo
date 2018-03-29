@@ -23,6 +23,10 @@
   border-radius: 2px;
   padding: 2px;
 }
+#dash_reset {
+  height: 25px;
+  padding: 5px 10px;
+}
 .dash_check_box {
   display: flex;
   justify-content: space-around;

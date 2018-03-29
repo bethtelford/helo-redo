@@ -16,6 +16,7 @@ class Dash extends Component {
       loading: true
     }
     this.grabPosts = this.grabPosts.bind(this);
+    this.reset = this.reset.bind(this);
   }
   componentDidMount() {
     this.grabPosts();
@@ -33,6 +34,17 @@ class Dash extends Component {
     axios.get(url)
       .then(res => {
         setTimeout(_ => this.setState({ posts: res.data, loading: false }), 500)
+      })
+  }
+  reset() {
+    let { myPosts } = this.state;
+    let url = `/api/posts/${this.props.userId}`;
+    if (myPosts) {
+      url += '?mine=true'
+    }
+    axios.get(url)
+      .then(res => {
+        this.setState({ posts: res.data, loading: false, search: '' })
       })
   }
   render() {
@@ -53,6 +65,7 @@ class Dash extends Component {
           <div className='dash_search_box'>
             <input value={this.state.search} onChange={e => this.setState({ search: e.target.value })} className='dash_search_bar' placeholder='Search by Title' />
             <img onClick={this.grabPosts} className='dash_search_button' src={searchLogo} alt='search' />
+            <button onClick={this.reset} className='dark_button' id='dash_reset'>Reset</button>
           </div>
           <div className='dash_check_box'>
             <p>My Posts</p>
