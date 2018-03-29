@@ -290,7 +290,7 @@ Then you will add the navigation functionality so the user can view any of the p
 ## Step 5
 Now you will add the ability to add a new post.
 
-* Set up input boxes for title, image URL, and content in New Post.
+* Set up input boxes for title, image URL, and content in the Form component.
   * Each input box should update state.
   * The image URL input box should populate an image preview.
 * Create the 'Post' button.
@@ -302,7 +302,7 @@ Now you will add the ability to add a new post.
   * The endpoint should accept a parameter for the user id.
   * The endpoint should pull the post title, image URL, and content off of the request body.
   * The endpoint should respond with the 'all good' status code once it has added the post to the database.
-* Write a method in New Post that sends a request to the endpoint you just wrote.
+* Write a method in Form that sends a request to the endpoint you just wrote.
   * The axios request should include the user id as a parameter.
   * The request should send all the values stored in state in the body.
   * Once the response comes back from the server, redirect the user to the Dashboard.
@@ -320,3 +320,99 @@ You just covered a lot of competencies! Here is the breakdown:
 
 <strong>Step 4</strong> </br>
 "Student can add ReactRouter to their code base (match object)" </br>
+
+# Part 3
+
+<b>Live example [here](https://cl.ly/3F0S2m1c261U)</b>
+
+It's really cool that we can store data in Redux, but it's kind of a pain to keep sending the user's id along with all the axios requests, and if the user refreshes the page they have to log in again. So to solve both these problems, you will be implementing sessions in this part.
+
+Additional functionality:
+* A user should be able to refresh the page and still be logged into the site.
+* A user should logout.
+
+## Design
+The changes for this part will deal exclusively with refactoring the data transfer, so the application's appearance will not change.
+
+## Step 1
+In this step you will get sessions set up in your server.
+
+* Run `npm i --save express-session`.
+* Open server/index.js and require express-session.
+* Set up the session (hint: this is a top-level middleware, so you should use `app.use`)
+  * Be sure to keep the session secret in your .env file.
+  * Don't forget to set resave to false and saveUninitialized to true.
+
+## Step 2
+Now you can use the session to store information! For this application all you will need to store is the user id.
+
+* Modify your register endpoint. Before sending the user object to the front end, set req.session.userid equal to the user id you just pulled out of the database.
+* Modify your login endpoint in the exact same way.
+
+The session is automatically remembered by the user's browser, so you will be able to use the user id in future endpoints without storing it in your front end code. You still want to send the username and profile picture in the response for both of these endpoints  however, because your front end code is going to display these values.
+You need an additional endpoint now to logout.
+
+* Write a POST endpoint in your server.
+  * It should have the URL '/api/auth/logout'.
+  * This endpoint should destroy the session using req.session.destroy.
+
+It may seem a little counter intuitive to use a POST endpoint for logging out, but INSERT SUPER COOL EXPLANATION HERE.
+
+## Step 3
+Then you can update your existing endpoints to use the session information.
+
+* Remove the parameter from your GET endpoint that returns multiple posts. You will be using the session instead.
+  * Update the database queries to use req.session.userid instead of req.params.userid.
+* Remove the parameter from your POST endpoint that creates a new post. You will be using the session instead.
+  * Update the database query to use req.session.userid instead of req.params.userid. 
+
+## Step 4
+Next you can remove all instances of the user id in your front end code. It will all be taken care of in the back by sessions!
+
+* Open reducer.js and remove the userId property from initialState, your reducer, and your action builders.
+* Now go to the Dashboard component and remove the connection to Redux.
+* Also remove the userId from the axios GET requests.
+* Open the Form component and remove the connection to Redux.
+* Also remove the userId from the axios POST request.
+
+At this point your application should function just the same as before, but you have much cleaner code doing it.
+
+## Step 5
+Finally, you will be sprucing up your Nav component so the user can refresh the page and still be logged in. Note: Because you have implemented sessions, the backend will remember your user when they refresh the page, but the font end won't look like it does. That's what you're going to fix in this step.
+
+* Open the Nav component and change it to a class component instead of a functional component.
+  * Make sure to change any instance of props to reference this.props instead.
+* Nav should be connected to Redux already, but you need to bring in an additional action builder.
+  * Import the action builder from your reducer that updates the user information.
+  * Add the action builder you just brought in as a value to the object in the connect method.
+* Write a GET endpoint in your server.
+  * This endpoint should have the URL string '/api/auth/me'.
+  * This endpoint should query the database for the username and profile picture using the user id stored in session.
+  * This endpoint should respond with that user information.
+* Write a method in Nav that hits the endpoint you just wrote.
+  * Once the response comes back, invoke the action builder that you just connected, passing in the user information from the response.
+* Use a lifecycle hook to fire this method as soon as the component loads. 
+
+Basically every time the navbar first loads, it is going to make a request to the backend to see if there is user information for the user id stored in sessions. 
+
+## Step 6
+The last piece is to set up the 'Logout' button to actually logout.
+
+* Write a method in Nav to hit the '/api/auth/logout' endpoint.
+  * Once the response comes back, invoke the action builder that clears the user information from Redux state.
+* Update the 'Logout' button to fire this method, instead of firing the action builder directly.
+
+## Final Step 
+Once you have completed all the functionality of your application you are ready to set up your server to serve the front end files.
+
+* Run `npm run build`
+* Use express.static to serve the build from your server.
+
+## Competencies
+You added two absolutely massive competencies! 
+
+"Student can store data in sessions" </br>
+"Student can create Node servers using the Express package (Serving static files)" </br>
+
+<b>Congratulations! You've completed 32 competencies and built your second full-stack application!</b>
+
