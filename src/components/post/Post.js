@@ -19,7 +19,6 @@ class Post extends Component {
   componentDidMount() {
     axios.get(`/api/post/${this.props.match.params.id}`)
       .then(res => {
-        console.log(res.data)
         setTimeout(_ => this.setState({ ...res.data, loading: false }), 500)
       })
   }

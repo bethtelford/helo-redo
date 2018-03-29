@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 import SideNav from './components/side-nav/SideNav';
 import routes from './routes';
@@ -15,4 +14,4 @@ function App() {
   )
 }
 
-export default withRouter(App);
+export default App;

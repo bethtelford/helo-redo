@@ -25,11 +25,11 @@ class Dash extends Component {
     let { search, myPosts } = this.state;
     let url = `/api/posts/${this.props.userId}`;
     if (myPosts && !search) {
-      url += '?mine=true'
+      url += '?mine=true';
     } else if (!myPosts && search) {
-      url += `?search=${search}`
+      url += `?search=${search}`;
     } else if (myPosts && search) {
-      url += `?mine=true&search=${search}`
+      url += `?mine=true&search=${search}`;
     }
     axios.get(url)
       .then(res => {
@@ -40,7 +40,7 @@ class Dash extends Component {
     let { myPosts } = this.state;
     let url = `/api/posts/${this.props.userId}`;
     if (myPosts) {
-      url += '?mine=true'
+      url += '?mine=true';
     }
     axios.get(url)
       .then(res => {

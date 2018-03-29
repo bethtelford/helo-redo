@@ -25,7 +25,6 @@ class Auth extends Component {
     }
   }
   login() {
-    console.log('login', this.state)
     axios.post('/api/auth/login', this.state)
       .then(res => {
         this.props.updateUser(res.data);
@@ -33,7 +32,6 @@ class Auth extends Component {
       })
   }
   register() {
-    console.log('register', this.state)
     axios.post('/api/auth/register', this.state)
       .then(res => {
         this.props.updateUser(res.data);

@@ -1,11 +1,10 @@
 module.exports = {
   register: (req, res) => {
-    console.log();
     let { username, password } = req.body;
     req.app.get('db').user.read_user(username, password)
       .then(user => {
         if (user[0]) {
-          res.status(200).send(user[0])
+          res.status(200).send(user[0]);
         } else {
           db.user.create_user(username, password, `https://robohash.org/${username}.png`)
             .then(user => res.status(200).send(user[0]))
