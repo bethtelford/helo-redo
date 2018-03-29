@@ -425,5 +425,5 @@ You added two absolutely massive competencies!
 "Student can store data in sessions" </br>
 "Student can create Node servers using the Express package (Serving static files)" </br>
 
-<b>Congratulations! You've completed 32 competencies and built your second full-stack application!</b>
+<b>Congratulations! You've completed 32 competencies and built your third full-stack application!</b>
 
