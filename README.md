@@ -367,7 +367,7 @@ You need an additional endpoint now to logout.
   * It should have the URL '/api/auth/logout'.
   * This endpoint should destroy the session using req.session.destroy.
 
-It may seem a little counter intuitive to use a POST endpoint for logging out, but INSERT SUPER COOL EXPLANATION HERE.
+It may seem a little counter intuitive to use a POST endpoint for logging out, but authentication endpoints traditionally use POST because it is more secure and it can help avoid some unexpected behavior in some kinds of websites. 
 
 ## Step 3
 Then you can update your existing endpoints to use the session information.
