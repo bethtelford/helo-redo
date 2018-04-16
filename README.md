@@ -60,8 +60,8 @@ This section will help you create the files you need and install the packages yo
 Congratulations! If you finished all the setup, you've already completed some demo competencies!
 
 "Student can use git to create, manage, and synchronize commits locally and remotely (Local and remote repository in-sync, .gitignore)" </br>
-"Student can use class based components in react and it's features (render, JSX, nested components)" </br>
 "Student can apply ES6 constructs in React for better code (import, export, destructuring)" </br>
+"Student can use class based components in react and it's features (render, JSX, nested components)" </br>
 "Student can create Node servers using the Express package (Server running)" </br>
 "Student can create tables in a database" </br>
 "Student can connect to their database in their NodeJS servers using Massive" </br>
@@ -254,6 +254,7 @@ First create the layout of the Dashboard.
 ## Step 2
 Then write the GET endpoint to retreive all posts. This endpoint is going to accept some queries: userposts(boolean) and search(string).
 
+* The endpoint should return the post information and the author information for each post (hint: use a join)
 * The endpoint should have a parameter for the user id.
 * If userposts is true AND there is a search string, the endpoint should respond with all the posts where...
   * The title contains the search string.
@@ -325,6 +326,8 @@ You just covered a lot of competencies! Here is the breakdown:
 "Student can create a RESTful API (params)" </br>
 "Student can create a RESTful API (queries)" </br>
 "Student can create a RESTful API (GET endpoint)" </br>
+"Student can utilize SQL Patterns in their databases (one-many)" </br>
+"Student can create SQL statements to manipulate data in their databases (join)" </br>
 
 <strong>Step 3</strong> </br>
 "Student can use componentDidMount in their code" </br>
@@ -389,7 +392,7 @@ Next you can remove all instances of the user id in your front end code. It will
 At this point your application should function just the same as before, but you have much cleaner code doing it.
 
 ## Step 5
-Finally, you will be sprucing up your Nav component so the user can refresh the page and still be logged in. Note: Because you have implemented sessions, the backend will remember your user when they refresh the page, but the font end won't look like it does. That's what you're going to fix in this step.
+Finally, you will be sprucing up your Nav component so the user can refresh the page and still be logged in. Note: Because you have implemented sessions, the backend will remember your user when they refresh the page, but the front end won't look like it does. That's what you're going to fix in this step.
 
 * Open the Nav component and change it to a class component instead of a functional component.
   * Make sure to change any instance of props to reference this.props instead.
