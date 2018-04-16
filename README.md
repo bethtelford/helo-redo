@@ -6,7 +6,59 @@ This project is designed to give you an opportunity to build something from scra
 
 This project is broken into three parts. The setup instructions are more detailed and are designed to get you started. The parts have varying levels of detail, with the newer concepts explained more. This gives you a chance to practice your skills on your own. Your mentors have also been asked to provide only minimal guidance. They can point you in the right direction, but cannot help you code. This project is a chance for you to combine and showcase the skills you've learned so far.
 
-Good luck and work hard!
+## Competencies
+Competencies covered by this project
+
+### Setup
+["Student can use git to create, manage, and synchronize commits locally and remotely (Local and remote repository in-sync, .gitignore)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
+["Student can apply ES6 constructs in React for better code (import, export, destructuring)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#react) </br>
+["Student can use class based components in react and it's features (render, JSX, nested components)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#react) </br>
+["Student can create Node servers using the Express package (Server running)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#server) </br>
+["Student can create tables in a database"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
+["Student can connect to their database in their NodeJS servers using Massive"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
+
+### Part 1
+<strong>Step 1</strong> </br>
+["Student can add ReactRouter to their code base (HashRouter)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
+["Student can add ReactRouter to their code base (Switch, Route, component)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
+["Student can add ReactRouter to their code base (Link)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
+<strong>Step 2</strong> </br>
+["Student can apply ES6 constructs in React for better code (arrow functions)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can use class based components in react and it's features (state, setState, constructors)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can use class based components in react and it's features (events)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can interact with the web via axios and REST"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (Status codes)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (body parser)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (POST endpoint)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can create SQL statements to manipulate data in their databases (Select)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can create SQL statements to manipulate data in their databases (Insert)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can run SQL commands in their NodeJS servers using Massive"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+<strong>Step 3</strong> </br>
+["Student can create functional components that receive and render props"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
+["Student can utilize Redux in their code to manage state (store, reducer)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
+["Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
+<strong>Step 4</strong> </br>
+["Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-4) </br>
+
+### Part 2
+<strong>Step 2</strong> </br>
+["Student can create a RESTful API (params)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+["Student can create a RESTful API (queries)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+["Student can create a RESTful API (GET endpoint)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+["Student can utilize SQL Patterns in their databases (one-many)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+["Student can create SQL statements to manipulate data in their databases (join)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+<strong>Step 3</strong> </br>
+["Student can use componentDidMount in their code"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3-1) </br>
+<strong>Step 4</strong> </br>
+["Student can add ReactRouter to their code base (match object)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-4-1) </br>
+
+### Part 3
+<strong>Step 3</strong> </br>
+["Student can store data in sessions"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3-2) </br>
+<strong>Final Step</strong> </br>
+["Student can create Node servers using the Express package (Serving static files)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#final-step) </br>
+
+Don't worry too much about the competencies; they will be covered as you build this project. Good luck and work hard!
 
 # Setup
 
@@ -55,16 +107,6 @@ This section will help you create the files you need and install the packages yo
 9) Make sure to run `nodemon` again and make sure your database is connecting.
 10) Copy the connection string from your .env file into SQLTabs and create the users table and the posts table.
 11) It's helpful to insert some dummy data into your database at this point to help you test as you go along. 
-
-## Competencies
-Congratulations! If you finished all the setup, you've already completed some demo competencies!
-
-"Student can use git to create, manage, and synchronize commits locally and remotely (Local and remote repository in-sync, .gitignore)" </br>
-"Student can apply ES6 constructs in React for better code (import, export, destructuring)" </br>
-"Student can use class based components in react and it's features (render, JSX, nested components)" </br>
-"Student can create Node servers using the Express package (Server running)" </br>
-"Student can create tables in a database" </br>
-"Student can connect to their database in their NodeJS servers using Massive" </br>
 
 # Part 1
 
@@ -181,35 +223,6 @@ Finally you will setup your Auth component to update Redux state.
   * Once the user information has come back from the server, invoke the action builder and pass the information in. 
   * The profile picture and username should now display in the navbar.
 
-
-## Competencies
-You just covered a lot of competencies! Here is the breakdown:
-
-<strong>Step 1</strong> </br>
-"Student can add ReactRouter to their code base (HashRouter)" </br>
-"Student can add ReactRouter to their code base (Switch, Route, component)" </br>
-"Student can add ReactRouter to their code base (Link)" </br>
-
-<strong>Step 2</strong> </br>
-"Student can apply ES6 constructs in React for better code (arrow functions)" </br>
-"Student can use class based components in react and it's features (state, setState, constructors)" </br>
-"Student can use class based components in react and it's features (events)" </br>
-"Student can interact with the web via axios and REST" </br>
-"Student can create a RESTful API (Status codes)" </br>
-"Student can create a RESTful API (body parser)" </br>
-"Student can create a RESTful API (POST endpoint)" </br>
-"Student can create SQL statements to manipulate data in their databases (Select)" </br>
-"Student can create SQL statements to manipulate data in their databases (Insert)" </br>
-"Student can run SQL commands in their NodeJS servers using Massive" </br>
-
-<strong>Step 3</strong> </br>
-"Student can create functional components that receive and render props" </br>
-"Student can utilize Redux in their code to manage state (store, reducer)" </br>
-"Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)" </br>
-
-<strong>Step 4</strong> </br>
-"Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)" </br>
-
 # Part 2
 
 <b>Live examples: [Dashboard](https://cl.ly/2Y2m0W0N3v2a) [New Post](https://cl.ly/0w3Q2r2b3h3L) [Failed New Post](https://cl.ly/1s0x1p231J0e) [Post View](https://cl.ly/101N3L1g0S08)</b>
@@ -238,7 +251,6 @@ Post View
 <img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_post.png" />
 New Post View
 <img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_new_post.png" />
-
 
 ## Step 1
 First create the layout of the Dashboard.
@@ -318,22 +330,6 @@ Now you will add the ability to add a new post.
   * The axios request should include the user id as a parameter.
   * The request should send all the values stored in state in the body.
   * Once the response comes back from the server, redirect the user to the Dashboard.
-
-## Competencies
-You just covered a lot of competencies! Here is the breakdown:
-
-<strong>Step 2</strong> </br>
-"Student can create a RESTful API (params)" </br>
-"Student can create a RESTful API (queries)" </br>
-"Student can create a RESTful API (GET endpoint)" </br>
-"Student can utilize SQL Patterns in their databases (one-many)" </br>
-"Student can create SQL statements to manipulate data in their databases (join)" </br>
-
-<strong>Step 3</strong> </br>
-"Student can use componentDidMount in their code" </br>
-
-<strong>Step 4</strong> </br>
-"Student can add ReactRouter to their code base (match object)" </br>
 
 # Part 3
 
@@ -421,12 +417,6 @@ Once you have completed all the functionality of your application you are ready 
 
 * Run `npm run build`
 * Use express.static to serve the build from your server.
-
-## Competencies
-You added two absolutely massive competencies! 
-
-"Student can store data in sessions" </br>
-"Student can create Node servers using the Express package (Serving static files)" </br>
 
 <b>Congratulations! You've completed 32 competencies and built your third full-stack application!</b>
 
