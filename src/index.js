@@ -10,10 +10,10 @@ import { unregister } from './registerServiceWorker';
 import './reset.css';
 import axios from 'axios';
 
-// Checking if there is a BASEURL that is being set for this project.
-// If so use it
-if (process.env.REACT_APP_BASEURL){
-    axios.defaults.baseUrl = process.env.REACT_APP_BASEURL;
+// Checking if in production
+// If so use a baseUrl to get it from here.
+if (process.env.NODE_ENV === 'production'){
+	axios.defaults.baseURL = 'https://helo.devmountain.com/v2/'
 }
 
 
