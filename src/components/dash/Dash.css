@@ -1,0 +1,45 @@
+.Dash {
+  width: 70%;
+  margin: 0 auto;
+}
+.dash_filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.dash_search_box {
+  display: flex;
+  width: 75%;
+}
+.dash_search_bar {
+  height: 25px;
+  width: 90%;
+}
+.dash_search_button {
+  height: 25px;
+  width: 25px;
+  background-color: #ff9770;
+  border-radius: 2px;
+  padding: 2px;
+}
+#dash_reset {
+  height: 25px;
+  padding: 5px 10px;
+}
+.dash_check_box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dash_post_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.dash_post_box > h3 {
+  font-size: 30px;
+}
+
+
