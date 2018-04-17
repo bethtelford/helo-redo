@@ -18,10 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf /parts/part3 && react-scripts build && mv build parts/part3",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "main": "server/server.js",
-  "proxy": "http://localhost:4000"
+  "proxy": "http://localhost:4000",
+  "homepage": "https://helo.devmountain.com/v2/part3"
 }
