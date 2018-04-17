@@ -4,7 +4,8 @@ const express = require('express'),
       massive = require('massive'),
       session = require('express-session'),
       ctrl = require('./controller')
-      port = process.env.PORT || 4000;
+      port = process.env.PORT || 4000
+      path = require('path');
 
 const app = express();
 
@@ -15,6 +16,8 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(express.static(__dirname+'/../parts'));
+
 // app.use((req, res, next) => {
 //   console.log('url', req.url, 'method', req.method);
 //   next();
@@ -23,7 +26,7 @@ massive(process.env.CONNECTION_STRING)
   .then(db => {
     app.set('db', db);
 
-    // Parts 1 & 2 
+    // Parts 1 & 2
     app.post('/api/v1/auth/register',  ctrl.v1.register);
     app.post('/api/v1/auth/login', ctrl.v1.login);
     app.get('/api/v1/posts/:userid', ctrl.v1.readPosts);
@@ -39,6 +42,16 @@ massive(process.env.CONNECTION_STRING)
 
     // Universal
     app.get('/api/post/:id', ctrl.readPost);
+
+    app.get('*', (req, res)=>{
+      if (req.url.includes('part1'))
+        return res.sendFile(path.join(__dirname, '../parts/part1/index.html'))
+      if (req.url.includes('part2'))
+        return res.sendFile(path.join(__dirname, '../parts/part2/index.html'))
+        return res.sendFile(path.join(__dirname, '../parts/part3/index.html'))
+
+
+    })
 
     app.listen(port, _ => console.log('Housten we have lift off on port '+ port ));
   })
