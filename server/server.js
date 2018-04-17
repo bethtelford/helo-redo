@@ -2,11 +2,17 @@ require('dotenv').config();
 const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
+      session = require('express-session'),
       ctrl = require('./controller');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+}))
 
 massive(process.env.CONNECTION_STRING)
   .then(db => {
@@ -16,9 +22,13 @@ massive(process.env.CONNECTION_STRING)
 
     app.post('/api/auth/login', ctrl.login);
 
-    app.get('/api/posts/:userid', ctrl.readPosts);
+    app.get('/api/auth/me', ctrl.userProfile);
 
-    app.post('/api/post/:userid', ctrl.createPost);
+    app.post('/api/auth/logout', ctrl.logout);
+
+    app.get('/api/posts', ctrl.readPosts);
+
+    app.post('/api/post', ctrl.createPost);
     
     app.get('/api/post/:id', ctrl.readPost);
 
