@@ -15,12 +15,9 @@ class Form extends Component {
     this.submit = this.submit.bind(this);
   }
   submit() {
-    if (this.props.userId) {
-      axios.post('/api/post', this.state)
-        .then(res => this.props.history.push('/dashboard'))
-    } else {
-      alert('You must log in to create posts');
-    }
+    axios.post('/api/post', this.state)
+      .then(res => this.props.history.push('/dashboard'))
+      .catch(err => alert('You must log in to create posts'))
   }
   render() {
     let imgSrc = this.state.img ? this.state.img : noImage;

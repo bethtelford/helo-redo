@@ -55,8 +55,12 @@ module.exports = {
   createPost: (req, res) => {
     let { userid } = req.session;
     let { title, img, content } = req.body;
-    req.app.get('db').post.create_post(userid, title, img, content)
-      .then(_ => res.status(200).send())
+    if (userid) {
+      req.app.get('db').post.create_post(userid, title, img, content)
+        .then(_ => res.status(200).send())
+    } else {
+      res.status(403).send();
+    }
   },
   readPost: (req, res) => {
     req.app.get('db').post.read_post(req.params.id)
