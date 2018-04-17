@@ -52,7 +52,7 @@ module.exports = {
             req.session.userid = user[0].id;
             res.status(200).send(user[0]);
           } else {
-            db.user.create_user(username, password, `https://robohash.org/${username}.png`)
+            req.app.get('db').user.create_user(username, password, `https://robohash.org/${username}.png`)
               .then(user => {
                 req.session.userid = user[0].id;
                 res.status(200).send(user[0]);
