@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf /parts/part3 && react-scripts build && mv build parts/part3",
+    "build": "rm -rf parts/part3 && react-scripts build && mv build parts/part3",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
