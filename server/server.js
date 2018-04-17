@@ -3,7 +3,8 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
       session = require('express-session'),
-      ctrl = require('./controller');
+      ctrl = require('./controller')
+      port = process.env.PORT || 4000;
 
 const app = express();
 
@@ -39,5 +40,5 @@ massive(process.env.CONNECTION_STRING)
     // Universal
     app.get('/api/post/:id', ctrl.readPost);
 
-    app.listen(4000, _ => console.log('Housten we have lift off on port 4000'));
+    app.listen(port, _ => console.log('Housten we have lift off on port '+ port ));
   })
