@@ -153,7 +153,9 @@ You are going to begin by setting up the routing.
    * Remove Auth, Dashboard, Form, and Post from the component.
    * Instead bring in routes from routes.js and render it instead of the other components.
    * The Nav component should remain, as this will show on almost every view. 
-      * The Nav component should not render if the current view is the Auth view (hint: use this.props.history to check which view the user is currently on).
+      * The Nav component should not render if the current view is the Auth view.
+      * Use the location object found on props (this.props.location.pathname) to programatically check which view the user is currently on. If the path is '/', hide the Nav Bar component.
+      * The location object is put onto props by react-router kind of like the match object, where you can find your routing parameters.
    * If you open your application in the browser you should see the navbar in every view but Auth. 
 * Create the 'Home', 'New Post', and 'Logout' buttons in the Nav Bar component. 
   * 'Home' should navigate to the Dashboard view.
