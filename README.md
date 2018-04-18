@@ -154,10 +154,10 @@ You are going to begin by setting up the routing.
    * Instead bring in routes from routes.js and render it instead of the other components.
    * The Nav component should remain, as this will show on almost every view. 
       * The Nav component should not render if the current view is the Auth view.
-      * Use the location object found on props (this.props.location.pathname) to programatically check which view the user is currently on. If the path is '/', hide the Nav Bar component.
+      * Use the location object found on props (this.props.location.pathname) to programatically check which view the user is currently on. If the path is '/', hide the Nav component.
       * The location object is put onto props by react-router kind of like the match object, where you can find your routing parameters.
    * If you open your application in the browser you should see the navbar in every view but Auth. 
-* Create the 'Home', 'New Post', and 'Logout' buttons in the Nav Bar component. 
+* Create the 'Home', 'New Post', and 'Logout' buttons in the Nav component. 
   * 'Home' should navigate to the Dashboard view.
   * 'New Post' should navigate to the New Post view.
   * 'Logout' should navidate to the Auth view. 
@@ -202,7 +202,7 @@ Your users can now register and login, but your front end immediately forgets wh
    * Write the mapStateToProps function at the bottom of the file.
    * Take the username and profile picture off of the Redux state.
    * Now invoke connect, passing in mapStateToProps. Immediately invoke it again passing in the name of the component.
-* Now if you console.log props inside your render method you should see the values coming from the Redux state. 
+* Now if you console.log props inside the Nav component you should see the values coming from the Redux state. 
 * Set up the user profile picture and username to display. This will be pretty boring looking until we update these values in the next step
 
 ## Step 4 
