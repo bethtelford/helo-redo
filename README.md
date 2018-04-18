@@ -10,53 +10,53 @@ This project is broken into three parts. The setup instructions are more detaile
 Competencies covered by this project
 
 ### Setup
-["Student can use git to create, manage, and synchronize commits locally and remotely (Local and remote repository in-sync, .gitignore)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
-["Student can apply ES6 constructs in React for better code (import, export, destructuring)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#react) </br>
-["Student can use class based components in react and it's features (render, JSX, nested components)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#react) </br>
-["Student can create Node servers using the Express package (Server running)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#server) </br>
-["Student can create tables in a database"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
-["Student can connect to their database in their NodeJS servers using Massive"](https://github.com/bethtelford/helo-redo/blob/master/README.md#database) </br>
+["Student can use git to create, manage, and synchronize commits locally and remotely (Local and remote repository in-sync, .gitignore)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#database) </br>
+["Student can apply ES6 constructs in React for better code (import, export, destructuring)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#react) </br>
+["Student can use class based components in react and it's features (render, JSX, nested components)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#react) </br>
+["Student can create Node servers using the Express package (Server running)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#server) </br>
+["Student can create tables in a database"](https://github.com/DevMountain/simulation-3/blob/master/README.md#database) </br>
+["Student can connect to their database in their NodeJS servers using Massive"](https://github.com/DevMountain/simulation-3/blob/master/README.md#database) </br>
 
 ### Part 1
 <strong>Step 1</strong> </br>
-["Student can add ReactRouter to their code base (HashRouter)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
-["Student can add ReactRouter to their code base (Switch, Route, component)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
-["Student can add ReactRouter to their code base (Link)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-1) </br>
+["Student can add ReactRouter to their code base (HashRouter)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-1) </br>
+["Student can add ReactRouter to their code base (Switch, Route, component)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-1) </br>
+["Student can add ReactRouter to their code base (Link)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-1) </br>
 <strong>Step 2</strong> </br>
-["Student can apply ES6 constructs in React for better code (arrow functions)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can use class based components in react and it's features (state, setState, constructors)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can use class based components in react and it's features (events)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can interact with the web via axios and REST"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can create a RESTful API (Status codes)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can create a RESTful API (body parser)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can create a RESTful API (POST endpoint)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can create SQL statements to manipulate data in their databases (Select)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can create SQL statements to manipulate data in their databases (Insert)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
-["Student can run SQL commands in their NodeJS servers using Massive"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2) </br>
+["Student can apply ES6 constructs in React for better code (arrow functions)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can use class based components in react and it's features (state, setState, constructors)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can use class based components in react and it's features (events)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can interact with the web via axios and REST"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (Status codes)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (body parser)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can create a RESTful API (POST endpoint)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can create SQL statements to manipulate data in their databases (Select)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can create SQL statements to manipulate data in their databases (Insert)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
+["Student can run SQL commands in their NodeJS servers using Massive"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2) </br>
 <strong>Step 3</strong> </br>
-["Student can create functional components that receive and render props"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
-["Student can utilize Redux in their code to manage state (store, reducer)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
-["Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3) </br>
+["Student can create functional components that receive and render props"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-3) </br>
+["Student can utilize Redux in their code to manage state (store, reducer)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-3) </br>
+["Student can utilize Redux in their code to manage state (connect, mapStateToProps, share state)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-3) </br>
 <strong>Step 4</strong> </br>
-["Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-4) </br>
+["Student can utilize Redux in their code to manage state (actions, action builders, mapDispatchToProps object)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-4) </br>
 
 ### Part 2
 <strong>Step 2</strong> </br>
-["Student can create a RESTful API (params)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
-["Student can create a RESTful API (queries)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
-["Student can create a RESTful API (GET endpoint)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
-["Student can utilize SQL Patterns in their databases (one-many)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
-["Student can create SQL statements to manipulate data in their databases (join)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-2-1) </br>
+["Student can create a RESTful API (params)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2-1) </br>
+["Student can create a RESTful API (queries)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2-1) </br>
+["Student can create a RESTful API (GET endpoint)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2-1) </br>
+["Student can utilize SQL Patterns in their databases (one-many)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2-1) </br>
+["Student can create SQL statements to manipulate data in their databases (join)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-2-1) </br>
 <strong>Step 3</strong> </br>
-["Student can use componentDidMount in their code"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3-1) </br>
+["Student can use componentDidMount in their code"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-3-1) </br>
 <strong>Step 4</strong> </br>
-["Student can add ReactRouter to their code base (match object)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-4-1) </br>
+["Student can add ReactRouter to their code base (match object)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-4-1) </br>
 
 ### Part 3
 <strong>Step 3</strong> </br>
-["Student can store data in sessions"](https://github.com/bethtelford/helo-redo/blob/master/README.md#step-3-2) </br>
+["Student can store data in sessions"](https://github.com/DevMountain/simulation-3/blob/master/README.md#step-3-2) </br>
 <strong>Final Step</strong> </br>
-["Student can create Node servers using the Express package (Serving static files)"](https://github.com/bethtelford/helo-redo/blob/master/README.md#final-step) </br>
+["Student can create Node servers using the Express package (Serving static files)"](https://github.com/DevMountain/simulation-3/blob/master/README.md#final-step) </br>
 
 Don't worry too much about the competencies; they will be covered as you build this project. Good luck and work hard!
 
@@ -66,7 +66,7 @@ This section will help you create the files you need and install the packages yo
 
 ## Color Palette & Font
 
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/style_guide.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/style_guide.png" />
 
 <b>[Google Font - Open Sans](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)</b>
 
@@ -110,7 +110,7 @@ This section will help you create the files you need and install the packages yo
 
 # Part 1
 
-<b>Live example [here](https://helo.devmountain.com/v2/part1/#/). Filled out planning sheet [here](https://github.com/bethtelford/helo-redo/blob/master/PLANNING_SHEET.md)</b>
+<b>Live example [here](https://helo.devmountain.com/v2/part1/#/). Filled out planning sheet [here](https://github.com/DevMountain/simulation-3/blob/master/PLANNING_SHEET.md)</b>
 
 In the first part you will set up routing and the ability to login/register.
 
@@ -134,9 +134,9 @@ Functionality of the Dashboard View:
 
 ## Design
 Authentication View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_auth.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_auth.png" />
 Dashboard View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_pt1_dashboard.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_pt1_dashboard.png" />
 
 ## Step 1
 You are going to begin by setting up the routing.
@@ -246,13 +246,13 @@ Functionality of the New Post View:
 
 ## Design
 Authentication View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_auth.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_auth.png" />
 Dashboard View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_pt2_dashboard.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_pt2_dashboard.png" />
 Post View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_post.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_post.png" />
 New Post View
-<img src="https://github.com/bethtelford/helo-redo/blob/master/assets/views/helo_redo_new_post.png" />
+<img src="https://github.com/DevMountain/simulation-3/blob/master/assets/views/helo_redo_new_post.png" />
 
 ## Step 1
 First create the layout of the Dashboard.
