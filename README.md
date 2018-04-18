@@ -110,7 +110,7 @@ This section will help you create the files you need and install the packages yo
 
 # Part 1
 
-<b>Live example [here](https://cl.ly/3q2d2c0w2A0R). Filled out planning sheet [here](https://github.com/bethtelford/helo-redo/blob/master/PLANNING_SHEET.md)</b>
+<b>Live example [here](https://helo.devmountain.com/v2/part1/#/). Filled out planning sheet [here](https://github.com/bethtelford/helo-redo/blob/master/PLANNING_SHEET.md)</b>
 
 In the first part you will set up routing and the ability to login/register.
 
@@ -225,7 +225,7 @@ Finally you will setup your Auth component to update Redux state.
 
 # Part 2
 
-<b>Live examples: [Dashboard](https://cl.ly/2Y2m0W0N3v2a) [New Post](https://cl.ly/0w3Q2r2b3h3L) [Failed New Post](https://cl.ly/1s0x1p231J0e) [Post View](https://cl.ly/101N3L1g0S08)</b>
+<b>Live example [here](https://helo.devmountain.com/v2/part2/#/)</b>
 
 In this part you will add the ability to view posts and create new ones.
 
@@ -333,7 +333,7 @@ Now you will add the ability to add a new post.
 
 # Part 3
 
-The live example looks exactly the same as the live example from Part 2. 
+<b>Live example [here](https://helo.devmountain.com/v2/part3/#/)</b>
 
 It's really cool that we can store data in Redux, but it's kind of a pain to keep sending the user's id along with all the axios requests, and if the user refreshes the page they have to log in again. So to solve both these problems, you will be implementing sessions in this part.
 
