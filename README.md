@@ -426,5 +426,5 @@ The last piece is to set up the 'Logout' button to actually logout.
   * Once the response comes back, invoke the action builder that clears the user information from Redux state.
 * Update the 'Logout' button to fire this method, instead of firing the action builder directly.
 
-<b>Congratulations! You've completed 32 competencies and built your third full-stack application!</b>
+<b>Congratulations! You've completed 31 competencies and built your third full-stack application!</b>
 
